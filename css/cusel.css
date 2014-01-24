@@ -6,7 +6,6 @@
 .cusel span {display:block; cursor:pointer; white-space:nowrap; padding:0 29px 0 10px; zoom:1; color:#777; line-height:30px}
 .cusel span:hover,
 .cusel .cuselOptHover {background:#f2f2f2}
-.cusel .cuselActive {background:#f2f2f2 !important; cursor:default}
 .cuselOpen {z-index:999}
 .cusel .cusel-scroll-wrap {display:block; visibility:hidden; position:absolute; left:0; top:30px; background:#fff; min-width:100%; width:auto}
 .cusel .jScrollPaneContainer {position:relative; overflow:hidden; z-index:5; border:1px solid #d3d3d3; background:#fff}

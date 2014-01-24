@@ -6,6 +6,8 @@
         $('.catalogue-search-input input').each(function() {
             if ($(this).val() == '') {
                 $(this).parent().find('span').css({'display': 'block'});
+            } else {
+                $(this).parent().find('a').css({'display': 'block'});
             }
         });
 
@@ -17,6 +19,20 @@
             if ($(this).val() == '') {
                 $(this).parent().find('span').css({'display': 'block'});
             }
+        });
+
+        $('.catalogue-search-input input').keyup(function() {
+            if ($(this).val() == '') {
+                $(this).parent().find('a').css({'display': 'none'});
+            } else {
+                $(this).parent().find('a').css({'display': 'block'});
+            }
+        });
+
+        $('.catalogue-search-input a').click(function() {
+            $(this).parent().find('input').val('').focus();
+            $(this).parent().find('a').css({'display': 'none'});
+            return false;
         });
 
         // табы на главной
@@ -41,7 +57,6 @@
             }).done(function(html) {
                 curLink.parents().filter('.catalogue-content').find('.catalogue-list').append(html);
                 curLink.parent().remove();
-                resizeCatalogue();
             });
             return false;
         });
@@ -82,8 +97,8 @@
         // описание презентации
         $('.presentation-text-link a').click(function() {
             var curLink = $(this);
-            var curText = curLink.html();
-            curLink.html(curLink.attr('rel'));
+            var curText = curLink.find('em').html();
+            curLink.find('em').html(curLink.attr('rel'));
             curLink.attr('rel', curText);
             $('.presentation-text-inner').toggle();
             curLink.parent().find('span').toggleClass('active');
@@ -93,6 +108,14 @@
         // окно слайдов
         $('.presentation-slides a').click(function() {
             var curIndex = $('.presentation-slides a').index($(this));
+            windowOpen($('.window-slides').html());
+            $('.window .window-slides-preview-list a').eq(curIndex).trigger('click');
+            $('.window .window-slides-preview').jScrollPane({showArrows: true});
+            return false;
+        });
+
+        $('.presentation-photo a').click(function() {
+            var curIndex = 0;
             windowOpen($('.window-slides').html());
             $('.window .window-slides-preview-list a').eq(curIndex).trigger('click');
             $('.window .window-slides-preview').jScrollPane({showArrows: true});
@@ -110,78 +133,6 @@
         });
 
     });
-
-    // блоки в каталоге
-    function resizeCatalogue() {
-        $('.catalogue-list').each(function() {
-            var curBlock = $(this);
-            curBlock.find('.catalogue-item:nth-child(4n)').each(function() {
-                var curItem   = $(this);
-                var curIndex  = curBlock.find('.catalogue-item').index(curItem);
-                var prevItem  = curBlock.find('.catalogue-item').eq(curIndex - 1);
-                var firstItem = curBlock.find('.catalogue-item').eq(curIndex - 2);
-                var zeroItem  = curBlock.find('.catalogue-item').eq(curIndex - 3);
-
-                var curHeight = curItem.find('.catalogue-item-name').height();
-
-                if (prevItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = prevItem.find('.catalogue-item-name').height();
-                }
-
-                if (firstItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = firstItem.find('.catalogue-item-name').height();
-                }
-
-                if (zeroItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = zeroItem.find('.catalogue-item-name').height();
-                }
-
-                curItem.find('.catalogue-item-name').height(curHeight);
-                prevItem.find('.catalogue-item-name').height(curHeight);
-                firstItem.find('.catalogue-item-name').height(curHeight);
-                zeroItem.find('.catalogue-item-name').height(curHeight);
-            });
-
-            if (curBlock.find('.catalogue-item').length % 4 == 3) {
-                var curItem   = curBlock.find('.catalogue-item:last');
-                var curIndex  = curBlock.find('.catalogue-item').index(curItem);
-                var prevItem  = curBlock.find('.catalogue-item').eq(curIndex - 1);
-                var firstItem = curBlock.find('.catalogue-item').eq(curIndex - 2);
-
-                var curHeight = curItem.find('.catalogue-item-name').height();
-
-                if (prevItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = prevItem.find('.catalogue-item-name').height();
-                }
-
-                if (firstItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = firstItem.find('.catalogue-item-name').height();
-                }
-
-                curItem.find('.catalogue-item-name').height(curHeight);
-                prevItem.find('.catalogue-item-name').height(curHeight);
-                firstItem.find('.catalogue-item-name').height(curHeight);
-            }
-
-            if (curBlock.find('.catalogue-item').length % 4 == 2) {
-                var curItem   = curBlock.find('.catalogue-item:last');
-                var curIndex  = curBlock.find('.catalogue-item').index(curItem);
-                var prevItem  = curBlock.find('.catalogue-item').eq(curIndex - 1);
-
-                var curHeight = curItem.find('.catalogue-item-name').height();
-
-                if (prevItem.find('.catalogue-item-name').height() > curHeight) {
-                    curHeight = prevItem.find('.catalogue-item-name').height();
-                }
-
-                curItem.find('.catalogue-item-name').height(curHeight);
-                prevItem.find('.catalogue-item-name').height(curHeight);
-            }
-
-        });
-    }
-
-    $(window).load(resizeCatalogue);
 
     // открытие окна
     function windowOpen(contentWindow) {
@@ -213,16 +164,19 @@
     function recalcWindow() {
         var windowWidth  = $(window).width();
         var windowHeight = $(window).height();
-        if ($('.window-container').width() < windowWidth) {
+        if ($('.window-container').width() + 26 < windowWidth) {
             $('.window-container').css({'margin-left': -$('.window-container').width() / 2});
+            $('.window-overlay').width(windowWidth);
         } else {
             $('.window-container').css({'left': 0});
+            $('.window-overlay').width($('.window-container').width() + 26);
         }
-        if ($('.window-container').height() < windowHeight) {
+        if ($('.window-container').height() + 80 < windowHeight) {
             $('.window-container').css({'margin-top': -$('.window-container').height() / 2});
+            $('.window-overlay').height(windowHeight);
         } else {
             $('.window-container').css({'top': 40});
-            $('.window-overlay').css({'min-height': $('.window-container').height() + 80});
+            $('.window-overlay').height($('.window-container').height() + 80);
         }
     }
 

@@ -29,11 +29,15 @@ header {display:block; height:112px; background:#0b74a8 url(../images/header.png
 .header-cart {float:left; width:126px; height:43px; background:url(../images/header-cart.png); margin:31px 0 0 0; padding:8px 0 0 67px; color:#fff; font-weight:300; font-size:13px; line-height:15px}
 .header-cart a {color:#fff; font-weight:600}
 .header-cart-empty {padding:9px 0 0 0}
+.header-cart-empty a {font-weight:300; text-decoration:none}
+.header-cart-empty a:hover {text-decoration:underline}
 
 .header-menu {float:right; font-size:13px; line-height:15px; padding:35px 0 0 0}
 .header-menu ul {margin:0; padding:0; list-style:none}
 .header-menu ul li {margin:0; padding:0 0 7px 0}
-.header-menu ul li a {color:#fff}
+.header-menu ul li a {color:#fff; text-decoration:none}
+.header-menu ul li a:hover {text-decoration:underline}
+.header-menu ul li img {vertical-align:middle; margin-left:4px}
 
 section {display:block; width:980px; margin:0 auto; padding:36px 0 0 0}
 section:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -45,11 +49,13 @@ nav ul {margin:0; padding:0; list-style:none; font-weight:300; line-height:34px}
 nav ul li {margin:0; padding:0; border-top:1px solid #fff; border-bottom:1px solid #e4e4e4}
 nav ul li:first-child {border-top:none}
 nav ul li:last-child {border-bottom:none}
+nav ul li.active {font-weight:normal}
 nav ul li a {display:block; padding:0 0 0 45px; text-decoration:none; color:#2c2c2c; position:relative}
 nav ul li a span {display:block; position:absolute; left:0; top:0; width:45px; height:34px; text-align:center; line-height:34px}
 nav ul li a span img {vertical-align:middle}
 nav ul li a:hover {text-decoration:underline}
 nav ul li ul {font-size:13px; line-height:22px; border-top:1px solid #e4e4e4; padding:0 0 6px 0}
+nav ul li.active ul {font-weight:300}
 nav ul li ul li {border:none; padding:0 0 0 45px}
 nav ul li ul li:first-child {border-top:1px solid #fff; padding-top:5px}
 nav ul li ul li a {display:inline; padding:0; color:#626262}
@@ -106,11 +112,13 @@ article form {display:block; margin:0; padding:24px 0 0 0; width:525px}
 
 .prefs {width:100%; border-top:1px solid #e1e1e1; margin-top:3px; padding:17px 0 0 0}
 .prefs:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.pref {float:left; width:96px; padding:0 0 0 31px}
-.pref:first-child {padding:0}
+.prefs a {float:left; width:96px; margin:0 0 0 31px; text-decoration:none; cursor:pointer}
+.prefs a:first-child {margin:0}
 .pref-icon {line-height:37px}
 .pref-icon img {vertical-align:middle}
+.prefs a:hover .pref-icon img {opacity:.5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50)}
 .pref-name {font-weight:500; color:#898989; line-height:17px; padding:22px 0 0 0}
+.prefs a:hover .pref-name {text-decoration:underline}
 .pref-text {font-size:12px; color:#595959; line-height:15px; padding:13px 0 0 0}
 
 .catalogue {padding:18px 0 0 0; border-top:1px solid #e1e1e1; margin:20px auto 0 auto; width:980px}
@@ -125,6 +133,8 @@ article form {display:block; margin:0; padding:24px 0 0 0; width:525px}
 .catalogue-search-input {position:absolute; left:35px; top:0; width:257px}
 .catalogue-search-input span {display:none; position:absolute; left:0; top:0; color:#5c5c5c; font-weight:300; font-size:13px; line-height:23px}
 .catalogue-search-input input {vertical-align:top; position:relative; border:none; background:url(../images/blank.gif); color:#2c2c2c; font:300 13px/23px "Exo 2", arial, helvetica, sans-serif; height:23px; width:257px; margin:0; padding:0; outline:none}
+.catalogue-search-input input::-ms-clear {display:none}
+.catalogue-search-input a {display:none; position:absolute; right:6px; top:5px; width:14px; height:14px; background:url(../images/catalogue-search-clear.png)}
 .catalogue-search-submit {position:absolute; left:7px; top:3px}
 .catalogue-search-submit input {vertical-align:top; width:17px; height:17px; background:url(../images/search.png); border:none; cursor:pointer; margin:0; padding:0; outline:none}
 .catalogue-tabs {float:left; line-height:46px; padding:0 0 0 10px}
@@ -135,7 +145,7 @@ article form {display:block; margin:0; padding:24px 0 0 0; width:525px}
 .catalogue-tabs ul li.active a {text-decoration:underline; color:#fff}
 
 .catalogue-list {position:relative; font-size:0; line-height:0; letter-spacing:-1px; width:989px; padding:22px 0 0 0}
-.catalogue-item {display:inline-block; vertical-align:top; width:234px; border:1px solid #dbdbdb; padding:1px 1px 10px 1px; margin:0 9px 21px 0}
+.catalogue-item {float:left; width:234px; border:1px solid #dbdbdb; padding:1px 1px 10px 1px; height:339px; margin:0 9px 21px 0}
 .catalogue-preview {height:175px; position:relative; overflow:hidden; line-height:0}
 .catalogue-item:hover .catalogue-preview-big {display:none}
 .catalogue-preview-mini {display:none; position:absolute; left:3px; top:2px}
@@ -144,9 +154,10 @@ article form {display:block; margin:0; padding:24px 0 0 0; width:525px}
 .catalogue-preview-mini img+img {left:117px}
 .catalogue-preview-mini img+img+img {left:0; top:88px}
 .catalogue-preview-mini img+img+img+img {left:117px}
-.catalogue-item-name {padding:18px 10px 0 15px; font-size:14px; line-height:17px; letter-spacing:0; color:#050505; font-weight:500}
-.catalogue-item-name a {color:#00b1d4; font-weight:300}
-.catalogue-item-code {font-size:13px; line-height:15px; letter-spacing:0; font-weight:100; color:#aeaeae; padding:0 10px 0 15px}
+.catalogue-item-name {padding:18px 10px 0 15px; font-size:14px; height:34px; line-height:17px; letter-spacing:0; color:#050505; font-weight:500}
+.catalogue-item-name a {color:#050505; text-decoration:none; cursor:pointer}
+.catalogue-item-name a:hover {opacity:.5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50)}
+.catalogue-item-name span {color:#00b1d4; font-weight:300; text-decoration:underline}
 .catalogue-item-row {margin:0 10px 0 15px; width:209px; padding:16px 0 0 0}
 .catalogue-item-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .catalogue-item-count {float:left; font-size:13px; line-height:15px; color:#5c5c5c; letter-spacing:0}
@@ -189,6 +200,7 @@ article form {display:block; margin:0; padding:24px 0 0 0; width:525px}
 .presentation-text-link {font-size:12px; font-weight:500; padding:8px 0 0 0}
 .presentation-text-link a {text-decoration:none}
 .presentation-text-link a:hover {text-decoration:underline}
+.presentation-text-link em {font-style:normal}
 .presentation-text-link span {display:inline-block; vertical-align:middle; width:0; height:0; border-top:5px solid #0483a8; border-left:4px solid transparent; border-right:4px solid transparent; margin:0 0 0 2px}
 .presentation-text-link span.active {border-top:none; border-bottom:5px solid #0483a8}
 
@@ -250,8 +262,8 @@ footer {display:block; height:132px; background:#147baa url(../images/footer.png
 .window-slides-big {line-height:0; width:100%; position:relative; overflow:hidden; height:540px; padding:23px 0 0 0}
 .window-slides-title {font-size:15px; padding:21px 0 0 0}
 .window-slides-text {font-size:13px; line-height:15px; color:#7c7c7c; font-weight:300; padding:15px 0 33px 0}
-.window-slides-preview {position:absolute; left:14px; top:0; width:171px; height:100%; overflow:hidden}
-.window-slides-preview-list {width:141px; line-height:0}
+.window-slides-preview {position:absolute; left:14px; top:0; width:171px; height:100%; overflow:hidden; outline:none}
+.window-slides-preview-list {width:141px; line-height:0; position:relative; outline:none}
 .window-slides-preview-list a {display:block; width:137px; height:103px; padding:1px; margin:20px 0; border:1px solid #dbdbdb; position:relative; overflow:hidden; cursor:pointer}
 .window-slides-preview-list a:hover img {opacity:.4; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40)}
 .window-slides-preview-list a span {display:none; width:135px; height:101px; position:absolute; left:0; top:0; border:2px solid #00b1d4}
