@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Слайдстор</title>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:400,100,300,400italic,500,600,700,700italic&subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/jquery.jscrollpane.css" />
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery.jscrollpane.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" href="favicon32x32.ico" />
+
+        <meta name="viewport" content="width=1024" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-inner">
+                    <div class="logo"><img src="images/logo.png" alt="" width="272" height="55" /></div>
+
+                    <div class="title">Интернет-магазин<br />PowerPoint презентаций<br />для бизнеса</div>
+
+                    <div class="header-contacts">
+                        <div class="header-phone"><span>+</span>7 495 971-59-56</div>
+                        <div class="header-time">
+                            <div class="header-time-row">
+                                <div class="header-time-days">ПН-ПТ:</div>
+                                <div class="header-time-hours">09:00 - 20:00</div>
+                            </div>
+                            <div class="header-time-row">
+                                <div class="header-time-days">СБ:</div>
+                                <div class="header-time-hours">10:00 - 17:00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-cart">
+                        В корзине<br />
+                        <a href="#">2 презентации</a>
+                    </div>
+
+                    <div class="header-menu">
+                        <ul>
+                            <li><a href="#">Войти</a></li>
+                            <li><a href="#">Регистрация</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+
+                <aside>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span><img src="images/nav-icon-01.png" alt="" width="18" height="18" /></span>Диаграммы</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-02.png" alt="" width="23" height="21" /></span>Графики</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-03.png" alt="" width="20" height="20" /></span>Фигуры</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-04.png" alt="" width="21" height="20" /></span>Шаблоны</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-05.png" alt="" width="12" height="22" /></span>Иконки</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-06.png" alt="" width="17" height="25" /></span>Карты</a></li>
+                            <li>
+                                <a href="#"><span><img src="images/nav-icon-07.png" alt="" width="19" height="18" /></span>Бизнес-кейсы</a>
+                                <ul>
+                                    <li class="active"><a href="#">Маркетинг и продажи</a></li>
+                                    <li><a href="#">Отчетность</a></li>
+                                    <li><a href="#">Связи с инвесторами</a></li>
+                                    <li><a href="#">Стратегия</a></li>
+                                    <li><a href="#">Управление проектами</a></li>
+                                    <li><a href="#">Финансы</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><span><img src="images/nav-icon-08.png" alt="" width="22" height="27" /></span>Обучение</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="aside-banner"><a href="#"><img src="files/banner-aside.png" alt="" width="210" height="290" /></a></div>
+                    <div class="aside-banner"><a href="#"><img src="files/banner-aside.png" alt="" width="210" height="290" /></a></div>
+                </aside>
+
+                <article>
+                    <div class="breadcrumbs">
+                        <a href="#">Главная</a> &nbsp; > &nbsp;
+                        <a href="#">Каталог</a> &nbsp; > &nbsp;
+                        <a href="#">Бизнес-кейсы</a> &nbsp; > &nbsp;
+                        <a href="#">Маркетинг и продажи</a> &nbsp; > &nbsp;
+                        <span>Корпоративные и маркетинговые стратегии</span>
+                    </div>
+
+                    <div class="presentation-ctrl">
+                        <a href="#">Предыдущая</a> &nbsp;&nbsp;&nbsp;&nbsp; < &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="presentation-ctrl-current">ПРЕЗЕНТАЦИЯ 1 из 12</a> &nbsp;&nbsp;&nbsp;&nbsp; > &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#">Следующая</a>
+                    </div>
+
+                    <div class="presentation-info">
+                        <div class="presentation-photo"><a href="#"><img src="files/presentation-photo.png" alt="" width="481" height="360" /></a></div>
+                        <div class="presentation-detail">
+                            <div class="presentation-print"><a href="#">Печать страницы</a> <img src="images/presentation-print.png" alt="" width="14" height="16" /></div>
+                            <div class="presentation-name">Корпоративные и&nbsp;маркетинговые стратегии</div>
+                            <div class="presentation-code">B-MR-001.01</div>
+                            <div class="presentation-count">30 слайдов</div>
+                            <div class="presentation-price"><span>5 490,-</span> 4 990,-</div>
+                            <div class="presentation-buy"><a href="#">Купить</a></div>
+                        </div>
+                    </div>
+
+                    <div class="presentation-social">
+                        <div class="presentation-social-item"><img src="files/presentation-social-1.png" alt="" width="121" height="20" /></div>
+                        <div class="presentation-social-item"><img src="files/presentation-social-2.png" alt="" width="94" height="20" /></div>
+                        <div class="presentation-social-item"><img src="files/presentation-social-3.png" alt="" width="115" height="20" /></div>
+                        <div class="presentation-social-link"><a href="#">Поделиться ссылкой</a></div>
+                    </div>
+
+                    <div class="presentation-text">
+                        The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape
+                        <div class="presentation-text-inner">
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                            <p>The 3D pyramids are based on the SmartArt functions of PowerPoint 2007 and 2010, and facilitate your high-quality design of your presentation. The pyramids are available in two di erent perspectives and di erent design options. With few clicks, you can use the pyramids subdivisions add or delete items and keep the original shape</p>
+                        </div>
+                        <div class="presentation-text-link"><a href="#" rel="Свернуть">Развернуть</a> <span></span></div>
+                    </div>
+
+                    <div class="presentation-slides-title">Все слайды презентации</div>
+
+                    <div class="presentation-slides">
+                        <a href="#"><img src="files/presentation-slide-1.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-2.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-3.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-4.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-1.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-2.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-3.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-4.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-1.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-2.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-3.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-4.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-1.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-2.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-3.png" alt="" width="174" height="131" /></a>
+                        <a href="#"><img src="files/presentation-slide-4.png" alt="" width="174" height="131" /></a>
+                    </div>
+
+                    <div class="window-slides">
+                        <div class="window-slides-inner">
+                            <div class="window-slides-big"><img src="files/window-slides-big-1.png" alt="" ></div>
+                            <div class="window-slides-title">Корпоративные и маркетинговые стратегии</div>
+                            <div class="window-slides-text">Вы находитесь в окне предварительного просмотра слайда, после оплаты файл будет скачан в формате .pptx.<br />Вам понадобится редактор Microsoft PowerPoint для того, чтобы редактировать этот файл</div>
+                            <div class="window-slides-preview">
+                                <div class="window-slides-preview-list">
+                                    <a href="files/window-slides-big-1.png" class="active"><img src="files/window-slides-preview-1.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-2.png"><img src="files/window-slides-preview-2.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-3.png"><img src="files/window-slides-preview-3.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-4.png"><img src="files/window-slides-preview-4.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-5.png"><img src="files/window-slides-preview-5.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-1.png"><img src="files/window-slides-preview-1.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-2.png"><img src="files/window-slides-preview-2.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-3.png"><img src="files/window-slides-preview-3.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-4.png"><img src="files/window-slides-preview-4.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-5.png"><img src="files/window-slides-preview-5.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-1.png"><img src="files/window-slides-preview-1.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-2.png"><img src="files/window-slides-preview-2.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-3.png"><img src="files/window-slides-preview-3.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-4.png"><img src="files/window-slides-preview-4.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-5.png"><img src="files/window-slides-preview-5.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                    <a href="files/window-slides-big-1.png"><img src="files/window-slides-preview-1.png" alt="" width="137" height="103" /><span><small></small></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- bottom -->
+            <div class="bottom">
+                <div class="bottom-how">
+                    <div class="bottom-title">Как происходит покупка презентаций<br />в интернет-магазине</div>
+                    <ul>
+                        <li><span>Поиск</span><br />Воспользуйтесь каталогом презентаций или меню поиска</li>
+                        <li><span>Выбор</span><br />Выберите нужную презентацию и добавьте ее в корзину</li>
+                        <li><span>Оплата</span><br />Оплатите презентацию банковской картой на сайте, и ссылка на&nbsp;скачивание презентации появится у вас в личном кабинете</li>
+                    </ul>
+                </div>
+
+                <div class="bottom-payments">
+                    <div class="bottom-title">Способы<br />оплаты</div>
+                    <ul>
+                        <li><img src="images/mastercard.png" alt="" width="67" height="40" /></li>
+                        <li><img src="images/visa.png" alt="" width="67" height="39" /></li>
+                    </ul>
+                </div>
+
+                <div class="bottom-faq">
+                    <div class="bottom-title">Часто задаваемые<br />вопросы</div>
+                    <ul>
+                        <li><a href="#">Что делать, если шаблон не подошел?</a></li>
+                        <li><a href="#">Как установить PowerPoint?</a></li>
+                        <li><a href="#">Какую диаграмму выбрать для визуализации процесса?</a></li>
+                        <li><a href="#">Полный список вопросов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- bottom END -->
+
+            <div class="bottom-menu">
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li><a href="#">Ответы на вопросы</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <div class="footer-logo"><img src="images/footer-logo.png" alt="" width="206" height="38" /></div>
+                        <div class="copyrights">© Слайдстор 2014 &nbsp; Крупнейший в России разработчик PowerPoint презентаций для бизнеса</div>
+                        <div class="social">
+                            <a href="#"><img src="images/social-1.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-2.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-3.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-4.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-5.png" alt="" width="32" height="32" /></a>
+                        </div>
+                    </div>
+                    <div class="footer-sep"></div>
+                    <div class="footer-bottom">
+                        <div class="footer-bottom-left"><a href="#">Общие условия пользования сайтом</a></div>
+                        <div class="footer-bottom-right">Microsoft и PowerPoint являются товарными знаками,  либо зарегистрированными товарными знаками Microsoft</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>

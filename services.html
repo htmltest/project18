@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Слайдстор</title>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo+2:400,100,300,400italic,500,600,700,700italic&subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/cusel.css" />
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/cusel-fixed-min-2.5.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" href="favicon32x32.ico" />
+
+        <meta name="viewport" content="width=1024" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="header-inner">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="272" height="55" /></a></div>
+
+                    <div class="title">Интернет-магазин<br />PowerPoint презентаций<br />для бизнеса</div>
+
+                    <div class="header-contacts">
+                        <div class="header-phone"><span>+</span>7 495 971-59-56</div>
+                        <div class="header-time">
+                            <div class="header-time-row">
+                                <div class="header-time-days">ПН-ПТ:</div>
+                                <div class="header-time-hours">09:00 - 20:00</div>
+                            </div>
+                            <div class="header-time-row">
+                                <div class="header-time-days">СБ:</div>
+                                <div class="header-time-hours">10:00 - 17:00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-cart">
+                        <div class="header-cart-empty">Корзина (0)</div>
+                    </div>
+
+                    <div class="header-menu">
+                        <ul>
+                            <li><a href="#">Мой кабинет</a></li>
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+
+                <aside>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span><img src="images/nav-icon-01.png" alt="" width="18" height="18" /></span>Диаграммы</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-02.png" alt="" width="23" height="21" /></span>Графики</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-03.png" alt="" width="20" height="20" /></span>Фигуры</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-04.png" alt="" width="21" height="20" /></span>Шаблоны</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-05.png" alt="" width="12" height="22" /></span>Иконки</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-06.png" alt="" width="17" height="25" /></span>Карты</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-07.png" alt="" width="19" height="18" /></span>Бизнес-кейсы</a></li>
+                            <li><a href="#"><span><img src="images/nav-icon-08.png" alt="" width="22" height="27" /></span>Обучение</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <article>
+                    <div class="breadcrumbs">
+                        <a href="#">Главная</a> &nbsp; > &nbsp;
+                        <span>Услуги</span>
+                    </div>
+                    <h2>Кастомизация шаблонов</h2>
+                    <p>Слайдстор предлагает услуги по доработке (кастомизации) шаблонов презентаций, размещенных в каталоге интернет-магазина, под требования фирменного стиля или узкие и конкретные задачи отдельной презентации:</p>
+                    <ul>
+                        <li>изменение формата (размера) слайдов</li>
+                        <li>изменение цветовой палитры</li>
+                        <li>изменение стилей графических элементов (линии, фигуры, иконки)</li>
+                        <li>изменение фото-изображений <span class="footnote">*</span></li>
+                        <li>изменение шрифта <span class="footnote">*</span></li>
+                        <li>добавление анимации</li>
+                    </ul>
+                    <p>Стоимость услуг по кастомизации шаблонов презентаций: 200 р. / слайд<br />Срок исполнения: 24 часа с момента оплаты заказа на доработку презентации</p>
+                    <div class="footnote-text"><span>*</span> Без учета стоимости платной лицензии</div>
+
+                    <div class="form-title">Заполните форму на кастомизацию шаблона Слайдстор</div>
+
+                    <form action="#" method="post">
+                        <div class="form-errors"></div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <div class="form-label">Имя <span>*</span></div>
+                                <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-label">Фамилия</div>
+                                <div class="form-input"><input type="text" name="lastname" value="" /></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <div class="form-label">E-mail <span>*</span></div>
+                                <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-label">Телефон</div>
+                                <div class="form-input"><input type="text" name="phone" value="" /></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <div class="form-label">Вы уже купили шаблон Слайдстор? <span>*</span></div>
+                                <div class="form-select">
+                                    <select name="buy">
+                                        <option value="1">Да</option>
+                                        <option value="2">Нет</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-label">Название / ID презентации <span>*</span></div>
+                                <div class="form-input"><input type="text" name="id" value="" class="required" /></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-label">Опишите задачу <span>*</span></div>
+                            <div class="form-textarea"><textarea name="comment" rows="5" cols="10" class="required"></textarea></div>
+                        </div>
+                        <div class="form-required"><span>*</span> Обязательные поля</div>
+                        <div class="form-submit"><div><input type="submit" value="Отправить" /></div></div>
+                    </form>
+
+                </article>
+
+            </section>
+
+            <div class="banner"><a href="#"><img src="files/banner.png" alt="" width="980" height="126" /></a></div>
+
+            <!-- bottom -->
+            <div class="bottom">
+                <div class="bottom-how">
+                    <div class="bottom-title">Как происходит покупка презентаций<br />в интернет-магазине</div>
+                    <ul>
+                        <li><span>Поиск</span><br />Воспользуйтесь каталогом презентаций или меню поиска</li>
+                        <li><span>Выбор</span><br />Выберите нужную презентацию и добавьте ее в корзину</li>
+                        <li><span>Оплата</span><br />Оплатите презентацию банковской картой на сайте, и ссылка на&nbsp;скачивание презентации появится у вас в личном кабинете</li>
+                    </ul>
+                </div>
+
+                <div class="bottom-payments">
+                    <div class="bottom-title">Способы<br />оплаты</div>
+                    <ul>
+                        <li><img src="images/mastercard.png" alt="" width="67" height="40" /></li>
+                        <li><img src="images/visa.png" alt="" width="67" height="39" /></li>
+                    </ul>
+                </div>
+
+                <div class="bottom-faq">
+                    <div class="bottom-title">Часто задаваемые<br />вопросы</div>
+                    <ul>
+                        <li><a href="#">Что делать, если шаблон не подошел?</a></li>
+                        <li><a href="#">Как установить PowerPoint?</a></li>
+                        <li><a href="#">Какую диаграмму выбрать для визуализации процесса?</a></li>
+                        <li><a href="#">Полный список вопросов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- bottom END -->
+
+            <div class="bottom-menu">
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li><a href="#">Ответы на вопросы</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <div class="footer-logo"><img src="images/footer-logo.png" alt="" width="206" height="38" /></div>
+                        <div class="copyrights">© Слайдстор 2014 &nbsp; Крупнейший в России разработчик PowerPoint презентаций для бизнеса</div>
+                        <div class="social">
+                            <a href="#"><img src="images/social-1.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-2.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-3.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-4.png" alt="" width="32" height="32" /></a>
+                            <a href="#"><img src="images/social-5.png" alt="" width="32" height="32" /></a>
+                        </div>
+                    </div>
+                    <div class="footer-sep"></div>
+                    <div class="footer-bottom">
+                        <div class="footer-bottom-left"><a href="#">Общие условия пользования сайтом</a></div>
+                        <div class="footer-bottom-right">Microsoft и PowerPoint являются товарными знаками,  либо зарегистрированными товарными знаками Microsoft</div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>
